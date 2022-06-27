@@ -25,11 +25,11 @@ string DatosPrin = ID + " " + Nombre + " " + Nacionalidad + " " + FechaDeNacimie
 
 Console.WriteLine("Que tipo de entidad es: Persona Dom(0), Persona Ext(1)");
 int Entidad = Convert.ToInt32( Console.ReadLine());
-if (Convert.ToBoolean( Entidad = 0)) 
+if (Convert.ToBoolean( Entidad == 0)) 
 {
     Console.WriteLine("Que tipo de entidad es: Persona Dom(0),Empresa Dom(1)");
     int EntidadD = Convert.ToInt32(Console.ReadLine());
-    if (Convert.ToBoolean(EntidadD = 0))
+    if (Convert.ToBoolean(EntidadD == 0))
     {
         
         Console.WriteLine("Apellido");
@@ -48,12 +48,7 @@ if (Convert.ToBoolean( Entidad = 0))
 
 
         productPersona AMAdd = ApellidoM.Mostrar();
-        string apellidom = AMAdd.Mostrar(
-        Console.ReadLine(),
-        Console.ReadLine(),
-        Console.ReadLine(),
-        Console.ReadLine(),
-        Console.ReadLine());
+        string apellidom = AMAdd.Mostrar(A, TR, TC, E, C);
         Console.WriteLine(DatosPrin);
         Console.WriteLine($"{apellidom}");
 
@@ -73,11 +68,7 @@ if (Convert.ToBoolean( Entidad = 0))
 
 
         productEmpresaLocal AMAdd = ApellidoM.MostrarE();
-        string apellidom = AMAdd.MostrarE(
-        Console.ReadLine(),
-        Console.ReadLine(),
-        Console.ReadLine(),
-        Console.ReadLine());
+        string apellidom = AMAdd.MostrarE(TR, TC, E, C);
         Console.WriteLine(DatosPrin);
         Console.WriteLine($"{apellidom}");
 
@@ -89,7 +80,7 @@ else
 {
     Console.WriteLine("Que tipo de entidad es: Persona Ext(0),Empresa Ext(1)");
     int EntidadD = Convert.ToInt32(Console.ReadLine());
-    if (Convert.ToBoolean(EntidadD = 0))
+    if (Convert.ToBoolean(EntidadD == 0))
     {
         Console.WriteLine("Apellido");
         string A = Console.ReadLine();
@@ -107,12 +98,7 @@ else
 
 
         productPersonaExtranjera AMAdd = ApellidoM.MostrarX();
-        string apellidom = AMAdd.MostrarX(
-        Console.ReadLine(),
-        Console.ReadLine(),
-        Console.ReadLine(),
-        Console.ReadLine(),
-        Console.ReadLine());
+        string apellidom = AMAdd.MostrarX(A, TR, TC, E, B);
         Console.WriteLine(DatosPrin);
         Console.WriteLine($"{apellidom}");
 
@@ -132,11 +118,7 @@ else
 
 
         productEmpresaExtranjera AMAdd = ApellidoM.MostrarEM();
-        string apellidom = AMAdd.MostrarEM(
-        Console.ReadLine(),
-        Console.ReadLine(),
-        Console.ReadLine(),
-        Console.ReadLine());
+        string apellidom = AMAdd.MostrarEM(TR, TC, E, B);
         Console.WriteLine(DatosPrin);
         Console.WriteLine($"{apellidom}");
 
