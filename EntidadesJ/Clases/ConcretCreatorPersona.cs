@@ -14,11 +14,6 @@ namespace EntidadesJ.Clases
         private string _email;
         private string _codigoPostal;
 
-        public ConcretCreatorPersona()
-        {
-
-
-        }
 
         public ConcretCreatorPersona(string Apellido, string TelefonoResidencial, string TelefonoCelular, string Email, string CodigoPostal)
         {
@@ -41,11 +36,6 @@ namespace EntidadesJ.Clases
         private string _email;
         private string _pobox;
 
-        public ConcretCreatorPersonaExtranjera()
-        {
-
-        }
-
         public ConcretCreatorPersonaExtranjera(string Apellido, string TelefonoResidencial, string TelefonoCelular, string Email, string POBox)
         {
             _apellido = Apellido;
@@ -54,7 +44,7 @@ namespace EntidadesJ.Clases
             _email = Email;
             _pobox = POBox;
         }
-        public override productPersonaExtranjera Mostrar()
+        public override productPersonaExtranjera MostrarX()
         {
             return new PersonaExtranjera(_apellido, _telefonoresidencial, _telefonocelular, _email, _pobox);
         }
@@ -68,11 +58,6 @@ namespace EntidadesJ.Clases
         private string _email;
         private string _pobox;
 
-        public ConcretCreatorEmpresaExtranjera()
-        {
-
-        }
-
         public ConcretCreatorEmpresaExtranjera( string TelefonoResidencial, string TelefonoCelular, string Email, string POBox)
         {
             
@@ -81,7 +66,7 @@ namespace EntidadesJ.Clases
             _email = Email;
             _pobox = POBox;
         }
-        public override productEmpresaExtranjera Mostrar()
+        public override productEmpresaExtranjera MostrarEM()
         {
             return new EmpresaExtranjera(_telefonoresidencial, _telefonocelular, _email, _pobox);
         }
@@ -93,24 +78,20 @@ namespace EntidadesJ.Clases
         private string _telefonoresidencial;
         private string _telefonocelular;
         private string _email;
-        private string _pobox;
+        private string _codigoPostal;
 
-        public ConcretCreatorEmpresaLocal()
-        {
 
-        }
-
-        public ConcretCreatorEmpresaLocal(string TelefonoResidencial, string TelefonoCelular, string Email, string POBox)
+        public ConcretCreatorEmpresaLocal(string TelefonoResidencial, string TelefonoCelular, string Email, string CodigoPostal)
         {
 
             _telefonoresidencial = TelefonoResidencial;
             _telefonocelular = TelefonoCelular;
             _email = Email;
-            _pobox = POBox;
+            _codigoPostal = CodigoPostal;
         }
-        public override productEmpresaLocal Mostrar()
+        public override productEmpresaLocal MostrarE()
         {
-            return new EmpresaLocal(_telefonoresidencial, _telefonocelular, _email, _pobox);
+            return new EmpresaLocal(_telefonoresidencial, _telefonocelular, _email, _codigoPostal);
         }
 
     }

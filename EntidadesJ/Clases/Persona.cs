@@ -45,7 +45,7 @@ namespace EntidadesJ.Clases
             _pobox = POBox;
         }
 
-        public string Mostrar(string Apellido, string TelefonoResidencial, string TelefonoCelular, string Email, string POBox)
+        public string MostrarX(string Apellido, string TelefonoResidencial, string TelefonoCelular, string Email, string POBox)
         {
             return Apellido + " " + TelefonoResidencial + " " + TelefonoCelular + " " + Email + " " + POBox;
         }
@@ -68,7 +68,7 @@ namespace EntidadesJ.Clases
             _pobox = POBox;
         }
 
-        public string Mostrar( string TelefonoResidencial, string TelefonoCelular, string Email, string POBox)
+        public string MostrarEM( string TelefonoResidencial, string TelefonoCelular, string Email, string POBox)
         {
             return TelefonoResidencial + " " + TelefonoCelular + " " + Email + " " + POBox;
         }
@@ -92,7 +92,7 @@ namespace EntidadesJ.Clases
             _codigoPostal = CodigoPostal;
         }
 
-        public string Mostrar(string TelefonoResidencial, string TelefonoCelular, string Email, string CodigoPostal)
+        public string MostrarE(string TelefonoResidencial, string TelefonoCelular, string Email, string CodigoPostal)
         {
             return TelefonoResidencial + " " + TelefonoCelular + " " + Email + " " + CodigoPostal;
         }

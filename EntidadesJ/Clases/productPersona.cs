@@ -13,17 +13,17 @@ namespace EntidadesJ.Clases
 
     public interface productPersonaExtranjera
     {
-        public string Mostrar(string Apellido, string TelefonoResidencial, string TelefonoCelular, string Email, string POBox);
+        public string MostrarX(string Apellido, string TelefonoResidencial, string TelefonoCelular, string Email, string POBox);
     }
 
     public interface productEmpresaExtranjera
     {
-        public string Mostrar(string TelefonoResidencial, string TelefonoCelular, string Email, string POBox);
+        public string MostrarEM(string TelefonoResidencial, string TelefonoCelular, string Email, string POBox);
     }
 
     public interface productEmpresaLocal
     {
-        public string Mostrar(string TelefonoResidencial, string TelefonoCelular, string Email, string POBox);
+        public string MostrarE(string TelefonoResidencial, string TelefonoCelular, string Email, string CodigoPostal);
     }
 
 

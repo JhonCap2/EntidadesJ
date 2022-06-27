@@ -14,19 +14,19 @@ namespace EntidadesJ.Clases
 
     public abstract class CreatorEx 
     {
-        public abstract productPersonaExtranjera Mostrar();
+        public abstract productPersonaExtranjera MostrarX();
 
     }
 
     public abstract class CreatorExEmp
     {
-        public abstract productEmpresaExtranjera Mostrar();
+        public abstract productEmpresaExtranjera MostrarEM();
 
     }
 
     public abstract class CreatorEmp
     {
-        public abstract productEmpresaLocal Mostrar();
+        public abstract productEmpresaLocal MostrarE();
 
     }
 }

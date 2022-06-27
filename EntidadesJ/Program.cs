@@ -31,9 +31,20 @@ if (Convert.ToBoolean( Entidad = 0))
     int EntidadD = Convert.ToInt32(Console.ReadLine());
     if (Convert.ToBoolean(EntidadD = 0))
     {
-        Console.WriteLine("Coloca: Apellido, TelefonoResidencial, TelefonoCelular, Email, CodigoPostal");
+        
+        Console.WriteLine("Apellido");
+        string A = Console.ReadLine();
+        Console.WriteLine("TelefonoResidencial");
+        string TR = Console.ReadLine();
+        Console.WriteLine("TelefonoCelular");
+        string TC = Console.ReadLine();
+        Console.WriteLine("Email");
+        string E = Console.ReadLine();
+        Console.WriteLine("CodigoPostal");
+        string C = Console.ReadLine();
 
-        Creator ApellidoM = new ConcretCreatorPersona();
+
+        Creator ApellidoM = new ConcretCreatorPersona(A,TR,TC,E,C);
 
 
         productPersona AMAdd = ApellidoM.Mostrar();
@@ -49,14 +60,20 @@ if (Convert.ToBoolean( Entidad = 0))
     }
     else 
     {
-        Console.WriteLine("Coloca: Apellido, TelefonoResidencial, TelefonoCelular, Email, CodigoPostal");
+        Console.WriteLine("TelefonoResidencial");
+        string TR = Console.ReadLine();
+        Console.WriteLine("TelefonoCelular");
+        string TC = Console.ReadLine();
+        Console.WriteLine("Email");
+        string E = Console.ReadLine();
+        Console.WriteLine("CodigoPostal");
+        string C = Console.ReadLine();
 
-        Creator ApellidoM = new ConcretCreatorEmpresaLocal();
+        CreatorEmp ApellidoM = new ConcretCreatorEmpresaLocal(TR,TC,E,C);
 
 
-        productPersona AMAdd = ApellidoM.Mostrar();
-        string apellidom = AMAdd.Mostrar(
-        Console.ReadLine(),
+        productEmpresaLocal AMAdd = ApellidoM.MostrarE();
+        string apellidom = AMAdd.MostrarE(
         Console.ReadLine(),
         Console.ReadLine(),
         Console.ReadLine(),
@@ -74,13 +91,23 @@ else
     int EntidadD = Convert.ToInt32(Console.ReadLine());
     if (Convert.ToBoolean(EntidadD = 0))
     {
-        Console.WriteLine("Coloca: Apellido, TelefonoResidencial, TelefonoCelular, Email, POBox");
+        Console.WriteLine("Apellido");
+        string A = Console.ReadLine();
+        Console.WriteLine("TelefonoResidencial");
+        string TR = Console.ReadLine();
+        Console.WriteLine("TelefonoCelular");
+        string TC = Console.ReadLine();
+        Console.WriteLine("Email");
+        string E = Console.ReadLine();
+        Console.WriteLine("CodigoPostal");
+        string B = Console.ReadLine();
 
-        Creator ApellidoM = new ConcretCreatorPersonaExtranjera();
+
+        CreatorEx ApellidoM = new ConcretCreatorPersonaExtranjera(A,TR,TC,E,B);
 
 
-        productPersona AMAdd = ApellidoM.Mostrar();
-        string apellidom = AMAdd.Mostrar(
+        productPersonaExtranjera AMAdd = ApellidoM.MostrarX();
+        string apellidom = AMAdd.MostrarX(
         Console.ReadLine(),
         Console.ReadLine(),
         Console.ReadLine(),
@@ -92,14 +119,20 @@ else
     }
     else 
     {
-        Console.WriteLine("Coloca: TelefonoResidencial, TelefonoCelular, Email, POBox");
+        Console.WriteLine("TelefonoResidencial");
+        string TR = Console.ReadLine();
+        Console.WriteLine("TelefonoCelular");
+        string TC = Console.ReadLine();
+        Console.WriteLine("Email");
+        string E = Console.ReadLine();
+        Console.WriteLine("CodigoPostal");
+        string B = Console.ReadLine();
 
-        Creator ApellidoM = new ConcretCreatorEmpresaExtranjera();
+        CreatorExEmp ApellidoM = new ConcretCreatorEmpresaExtranjera(TR,TC,E,B);
 
 
-        productPersona AMAdd = ApellidoM.Mostrar();
-        string apellidom = AMAdd.Mostrar(
-        Console.ReadLine(),
+        productEmpresaExtranjera AMAdd = ApellidoM.MostrarEM();
+        string apellidom = AMAdd.MostrarEM(
         Console.ReadLine(),
         Console.ReadLine(),
         Console.ReadLine(),
