@@ -8,93 +8,27 @@ namespace EntidadesJ.Clases
 {
     public class Persona : productPersona
     {
-        private string _apellido;
-        private string _telefonoresidencial;
-        private string _telefonocelular;
-        private string _email;
-        private string _codigoPostal;
+        private string _id;
+        private string _nombre;
+        private string _nacionalidad;
+        private string _fechadenacimiento;
+        private string _lugarnacimiento;
+        private string _isr;
 
-        public Persona(string Apellido, string TelefonoResidencial, string TelefonoCelular, string Email, string CodigoPostal)
+        public Persona(string ID, string Nombre, string Nacionalidad, string FechaDeNacimiento, string LugarNacimiento, string ISR)
         {
-            _apellido = Apellido;
-            _telefonoresidencial = TelefonoResidencial;
-            _telefonocelular = TelefonoCelular;
-            _email = Email;
-            _codigoPostal = CodigoPostal;
+            _id = ID;
+            _nombre = Nombre;
+            _nacionalidad = Nacionalidad;
+            _fechadenacimiento = FechaDeNacimiento;
+            _lugarnacimiento = LugarNacimiento;
+            _isr = ISR;
         }
 
-        public string Mostrar(string Apellido, string TelefonoResidencial, string TelefonoCelular, string Email, string CodigoPostal)
+        public string Mostrar(string ID, string Nombre, string Nacionalidad, string FechaDeNacimiento, string LugarNacimiento, string ISR)
         {
-            return Apellido + " " + TelefonoResidencial + " " + TelefonoCelular + " " + Email + " " + CodigoPostal;
-        }
-    }
-    public class PersonaExtranjera : productPersonaExtranjera
-    {
-        private string _apellido;
-        private string _telefonoresidencial;
-        private string _telefonocelular;
-        private string _email;
-        private string _pobox;
-
-        public PersonaExtranjera(string Apellido, string TelefonoResidencial, string TelefonoCelular, string Email, string POBox)
-        {
-            _apellido = Apellido;
-            _telefonoresidencial = TelefonoResidencial;
-            _telefonocelular = TelefonoCelular;
-            _email = Email;
-            _pobox = POBox;
-        }
-
-        public string MostrarX(string Apellido, string TelefonoResidencial, string TelefonoCelular, string Email, string POBox)
-        {
-            return Apellido + " " + TelefonoResidencial + " " + TelefonoCelular + " " + Email + " " + POBox;
+            return ID + " " + Nombre + " " + Nacionalidad + " " + FechaDeNacimiento + " " + LugarNacimiento + " " + ISR;
         }
     }
-
-    public class EmpresaExtranjera : productEmpresaExtranjera
-    {
-       
-        private string _telefonoresidencial;
-        private string _telefonocelular;
-        private string _email;
-        private string _pobox;
-
-        public EmpresaExtranjera( string TelefonoResidencial, string TelefonoCelular, string Email, string POBox)
-        {
-            
-            _telefonoresidencial = TelefonoResidencial;
-            _telefonocelular = TelefonoCelular;
-            _email = Email;
-            _pobox = POBox;
-        }
-
-        public string MostrarEM( string TelefonoResidencial, string TelefonoCelular, string Email, string POBox)
-        {
-            return TelefonoResidencial + " " + TelefonoCelular + " " + Email + " " + POBox;
-        }
-    }
-
-
-    public class EmpresaLocal : productEmpresaLocal
-    {
-
-        private string _telefonoresidencial;
-        private string _telefonocelular;
-        private string _email;
-        private string _codigoPostal;
-
-        public EmpresaLocal(string TelefonoResidencial, string TelefonoCelular, string Email, string CodigoPostal)
-        {
-
-            _telefonoresidencial = TelefonoResidencial;
-            _telefonocelular = TelefonoCelular;
-            _email = Email;
-            _codigoPostal = CodigoPostal;
-        }
-
-        public string MostrarE(string TelefonoResidencial, string TelefonoCelular, string Email, string CodigoPostal)
-        {
-            return TelefonoResidencial + " " + TelefonoCelular + " " + Email + " " + CodigoPostal;
-        }
-    }
+    
 }

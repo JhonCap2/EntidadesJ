@@ -8,92 +8,26 @@ namespace EntidadesJ.Clases
 {
     public class ConcretCreatorPersona : Creator
     {
-        private string _apellido;
-        private string _telefonoresidencial;
-        private string _telefonocelular;
-        private string _email;
-        private string _codigoPostal;
+        private string _id;
+        private string _nombre;
+        private string _nacionalidad;
+        private string _fechadenacimiento;
+        private string _lugarnacimiento;
+        private string _isr;
 
 
-        public ConcretCreatorPersona(string Apellido, string TelefonoResidencial, string TelefonoCelular, string Email, string CodigoPostal)
+        public ConcretCreatorPersona(string ID, string Nombre, string Nacionalidad, string FechaDeNacimiento, string LugarNacimiento, string ISR)
         {
-            _apellido = Apellido;
-            _telefonoresidencial = TelefonoResidencial;
-            _telefonocelular = TelefonoCelular;
-            _email = Email;
-            _codigoPostal = CodigoPostal;
+            _id = ID;
+            _nombre = Nombre;
+            _nacionalidad = Nacionalidad;
+            _fechadenacimiento = FechaDeNacimiento;
+            _lugarnacimiento = LugarNacimiento;
+            _isr = ISR;
         }
         public override productPersona Mostrar()
         {
-            return new Persona(_apellido, _telefonoresidencial, _telefonocelular, _email, _codigoPostal);
+            return new Persona(_id, _nombre, _nacionalidad, _fechadenacimiento, _lugarnacimiento, _isr);
         }
     }
-    public class ConcretCreatorPersonaExtranjera : CreatorEx
-    {
-        private string _apellido;
-        private string _telefonoresidencial;
-        private string _telefonocelular;
-        private string _email;
-        private string _pobox;
-
-        public ConcretCreatorPersonaExtranjera(string Apellido, string TelefonoResidencial, string TelefonoCelular, string Email, string POBox)
-        {
-            _apellido = Apellido;
-            _telefonoresidencial = TelefonoResidencial;
-            _telefonocelular = TelefonoCelular;
-            _email = Email;
-            _pobox = POBox;
-        }
-        public override productPersonaExtranjera MostrarX()
-        {
-            return new PersonaExtranjera(_apellido, _telefonoresidencial, _telefonocelular, _email, _pobox);
-        }
-
-    }
-
-    public class ConcretCreatorEmpresaExtranjera : CreatorExEmp
-    { 
-        private string _telefonoresidencial;
-        private string _telefonocelular;
-        private string _email;
-        private string _pobox;
-
-        public ConcretCreatorEmpresaExtranjera( string TelefonoResidencial, string TelefonoCelular, string Email, string POBox)
-        {
-            
-            _telefonoresidencial = TelefonoResidencial;
-            _telefonocelular = TelefonoCelular;
-            _email = Email;
-            _pobox = POBox;
-        }
-        public override productEmpresaExtranjera MostrarEM()
-        {
-            return new EmpresaExtranjera(_telefonoresidencial, _telefonocelular, _email, _pobox);
-        }
-
-    }
-
-    public class ConcretCreatorEmpresaLocal : CreatorEmp
-    {
-        private string _telefonoresidencial;
-        private string _telefonocelular;
-        private string _email;
-        private string _codigoPostal;
-
-
-        public ConcretCreatorEmpresaLocal(string TelefonoResidencial, string TelefonoCelular, string Email, string CodigoPostal)
-        {
-
-            _telefonoresidencial = TelefonoResidencial;
-            _telefonocelular = TelefonoCelular;
-            _email = Email;
-            _codigoPostal = CodigoPostal;
-        }
-        public override productEmpresaLocal MostrarE()
-        {
-            return new EmpresaLocal(_telefonoresidencial, _telefonocelular, _email, _codigoPostal);
-        }
-
-    }
-
 }

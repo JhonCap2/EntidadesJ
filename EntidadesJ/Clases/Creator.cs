@@ -11,22 +11,4 @@ namespace EntidadesJ.Clases
         public abstract productPersona Mostrar();
 
     }
-
-    public abstract class CreatorEx 
-    {
-        public abstract productPersonaExtranjera MostrarX();
-
-    }
-
-    public abstract class CreatorExEmp
-    {
-        public abstract productEmpresaExtranjera MostrarEM();
-
-    }
-
-    public abstract class CreatorEmp
-    {
-        public abstract productEmpresaLocal MostrarE();
-
-    }
 }

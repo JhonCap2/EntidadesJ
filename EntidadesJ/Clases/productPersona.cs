@@ -8,23 +8,6 @@ namespace EntidadesJ.Clases
 {
     public interface productPersona
     {
-        public string Mostrar(string Apellido, string TelefonoResidencial, string TelefonoCelular, string Email, string CodigoPostal);
+        public string Mostrar(string ID, string Nombre, string Nacionalidad, string FechaDeNacimiento, string LugarNacimiento, string ISR);
     }
-
-    public interface productPersonaExtranjera
-    {
-        public string MostrarX(string Apellido, string TelefonoResidencial, string TelefonoCelular, string Email, string POBox);
-    }
-
-    public interface productEmpresaExtranjera
-    {
-        public string MostrarEM(string TelefonoResidencial, string TelefonoCelular, string Email, string POBox);
-    }
-
-    public interface productEmpresaLocal
-    {
-        public string MostrarE(string TelefonoResidencial, string TelefonoCelular, string Email, string CodigoPostal);
-    }
-
-
 }
